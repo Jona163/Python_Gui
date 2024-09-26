@@ -43,3 +43,22 @@ def toggle_mode():
         button_mode.configure(image = img_dark )  
         ct.set_appearance_mode("Light")
         root.config(bg='white')
+
+
+root = CTk()
+root.geometry('375x500')
+root.title('')
+root.resizable(False, False)
+root.call('wm', 'iconphoto', root._w, PhotoImage(file = 'images/logo.png'))
+root.configure(bg="black")
+
+mode = "dark" 
+expression = StringVar() 
+img_light = PhotoImage(file = 'images/sun.png')
+img_dark = PhotoImage(file = 'images/moon.png')
+
+button_mode = CTkButton(root, image = img_light , text='', 
+    hover_color = ('white','black'),
+    fg_color = ('white','black'),width=50, height=50,
+    command= toggle_mode)
+button_mode.grid(row=0, column=0)
