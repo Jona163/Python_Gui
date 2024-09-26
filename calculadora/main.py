@@ -19,3 +19,27 @@ def delete_last():
     if exp:
         new_exp = exp[:-1]
         expression.set(new_exp)
+
+
+def calculate():
+    global expression
+    try:
+        result = eval(expression.get())
+        if isinstance(result, float):
+            result = round(result, 3)
+        expression.set(str(result))
+    except Exception as e:
+        expression.set("ERROR")
+
+def toggle_mode():
+    global mode
+    if mode == "light":
+        mode = "dark"
+        button_mode.configure(image = img_light)         
+        ct.set_appearance_mode("Dark")
+        root.config(bg='black')
+    else:
+        mode = "light"
+        button_mode.configure(image = img_dark )  
+        ct.set_appearance_mode("Light")
+        root.config(bg='white')
