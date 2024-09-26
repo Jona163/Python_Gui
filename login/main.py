@@ -37,3 +37,18 @@ correo.grid(columnspan=2, row=1,padx=4, pady =4)
 contrasenna = CTkEntry(frame,show="*", text_font = ('sans serif',12), placeholder_text= 'Contraseña',
  border_color='#2cb67d', fg_color= '#010101', width =220,height=40)
 contrasenna.grid(columnspan=2, row=2,padx=4, pady =4)
+
+
+checkbox = CTkCheckBox(frame, text="Recordarme",hover_color='#7f5af0', 
+	border_color='#2cb67d', fg_color='#2cb67d')
+checkbox.grid(columnspan=2, row=3,padx=4, pady =4)
+
+bt_iniciar = CTkButton(frame, text_font = ('sans serif',12), border_color='#2cb67d', fg_color='#010101',
+	hover_color='#2cb67d',corner_radius=12,border_width=2,
+    text='INICIAR SESIÓN')
+bt_iniciar.grid(columnspan=2, row=4,padx=4, pady =4)
+
+bt_google= CTkButton(frame, text_font = ('sans serif',12), border_color='#7f5af0', fg_color='#010101', 
+	hover_color='#16161a',corner_radius=12,border_width=2,
+    text=' Google Login ', image= img_google)
+bt_google.grid(column = 0, row=6, padx=4, pady =4)
