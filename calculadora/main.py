@@ -80,3 +80,22 @@ CircularButton(root, text="7",  command=lambda: add_to_input("7")).grid(row=2, c
 CircularButton(root, text="8",  command=lambda: add_to_input("8")).grid(row=2, column=1)
 CircularButton(root, text="9",  command=lambda: add_to_input("9")).grid(row=2, column=2)
 CircularButton(root, text="×",  command=lambda: add_to_input("*")).grid(row=2, column=3)
+
+
+CircularButton(root, text="4",  command=lambda: add_to_input("4")).grid(row=3, column=0)
+CircularButton(root, text="5",  command=lambda: add_to_input("5")).grid(row=3, column=1)
+CircularButton(root, text="6",  command=lambda: add_to_input("6")).grid(row=3, column=2)
+CircularButton(root, text="-",  command=lambda: add_to_input("-")).grid(row=3, column=3)
+
+CircularButton(root, text="1",  command=lambda: add_to_input("1")).grid(row=4, column=0)
+CircularButton(root, text="2",  command=lambda: add_to_input("2")).grid(row=4, column=1)
+CircularButton(root, text="3",  command=lambda: add_to_input("3")).grid(row=4, column=2)
+CircularButton(root, text="+",  command=lambda: add_to_input("+")).grid(row=4, column=3)
+
+CircularButton(root, text="0",  command=lambda: add_to_input("0")).grid(row=5, column=0)
+CircularButton(root, text=".",  command=lambda: add_to_input(".")).grid(row=5, column=1)
+CircularButton(root, text="AC",  command = lambda:expression.set("")).grid(row=5, column=2)
+CircularButton(root, text="=",  command=calculate).grid(row=5, column=3)
+
+root.mainloop()
+
