@@ -52,3 +52,15 @@ bt_google= CTkButton(frame, text_font = ('sans serif',12), border_color='#7f5af0
 	hover_color='#16161a',corner_radius=12,border_width=2,
     text=' Google Login ', image= img_google)
 bt_google.grid(column = 0, row=6, padx=4, pady =4)
+
+
+bt_facebook = CTkButton(frame, text_font = ('sans serif',12), border_color='#7f5af0', fg_color='#010101',
+	hover_color='#16161a',corner_radius=12,border_width=2,
+    text='Facebook  Login', image= img_facebook)
+bt_facebook.grid(column=1, row=6,padx=4, pady =4)
+
+
+
+root.call('wm', 'iconphoto', root._w, logo)
+root.mainloop()
+
