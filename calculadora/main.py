@@ -62,3 +62,21 @@ button_mode = CTkButton(root, image = img_light , text='',
     fg_color = ('white','black'),width=50, height=50,
     command= toggle_mode)
 button_mode.grid(row=0, column=0)
+
+
+entry = CTkEntry(root, textvariable = expression, 
+    text_font=("Helvetica", 28), justify="right",
+    text_color  =('black', 'white'),
+    corner_radius=0,state="disabled" ,
+    width=280, fg_color=('white', 'black'), border=0)
+entry.grid(row=0, column=1, columnspan=3, pady=5,ipady=15)
+
+CircularButton(root, text=" C ",  command=delete_last).grid(row=1, column=0)
+CircularButton(root, text="+/-",  command=plus_minus).grid(row=1, column=1)
+CircularButton(root,  text=" % ", command=lambda: add_to_input("/100")).grid(row=1, column=2)
+CircularButton(root, text=" ÷ ",  command=lambda: add_to_input("/")).grid(row=1, column=3)
+
+CircularButton(root, text="7",  command=lambda: add_to_input("7")).grid(row=2, column=0)
+CircularButton(root, text="8",  command=lambda: add_to_input("8")).grid(row=2, column=1)
+CircularButton(root, text="9",  command=lambda: add_to_input("9")).grid(row=2, column=2)
+CircularButton(root, text="×",  command=lambda: add_to_input("*")).grid(row=2, column=3)
