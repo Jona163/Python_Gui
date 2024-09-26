@@ -20,3 +20,20 @@ frame.rowconfigure([0,1,2,3,4,5], weight=1)
 
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
+
+
+
+logo = PhotoImage(file='images/logo.png') 
+img_google = PhotoImage(file='images/google.png')
+img_facebook = PhotoImage(file='images/facebook.png')
+
+
+CTkLabel(frame, image = logo).grid(columnspan=2, row=0)
+
+correo = CTkEntry(frame,  text_font = ('sans serif',12), placeholder_text= 'Correo electronico', 
+	border_color='#2cb67d', fg_color= '#010101',width =220,height=40)
+correo.grid(columnspan=2, row=1,padx=4, pady =4)
+
+contrasenna = CTkEntry(frame,show="*", text_font = ('sans serif',12), placeholder_text= 'Contraseña',
+ border_color='#2cb67d', fg_color= '#010101', width =220,height=40)
+contrasenna.grid(columnspan=2, row=2,padx=4, pady =4)
